@@ -1,0 +1,39 @@
+.note-screen__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.note-screen__content {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  padding:2rem;
+}
+
+.note-screen__title-input {
+  color:$dark-grey;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.note-screen__textarea {
+  color:$dark-grey;
+  font-size: 20px;
+  flex: 1 1 auto;
+  resize: none;
+}
+
+
+.note-screen__title-input, .note-screen__textarea {
+  border:none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.note-screen__image img {
+  box-shadow: 5px 5px $dark-grey;
+  height: 150px;
+}

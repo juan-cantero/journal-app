@@ -18,8 +18,13 @@ const LoginScreen = () => {
           placeholder="password"
           name="password"
         />
-        <button type="submit">Login</button>
-        <hr />
+        <button
+          className="btn btn-primary button-block"
+          disabled={false}
+          type="submit"
+        >
+          Login
+        </button>
         <div className="login-screen__social-networks">
           <p>Login with social network</p>
           <div className="google-btn">
@@ -35,7 +40,9 @@ const LoginScreen = () => {
             </p>
           </div>
         </div>
-        <Link to="/login-screen/register">create new account</Link>
+        <Link className="link" to="/login-screen/register">
+          create new account
+        </Link>
       </form>
     </div>
   );

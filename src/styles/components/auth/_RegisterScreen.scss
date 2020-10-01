@@ -1,0 +1,10 @@
+.register-screen__title {
+  color:darken($color:$primary, $amount: 20);
+  margin-bottom: 20px ;
+}
+
+.register-screen__input {
+  @extend .input-form;
+  
+
+}

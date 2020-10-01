@@ -1,6 +1,22 @@
 
-@import './base/settings';
-@import './base/base';
-@import './components/Ui/AuthLayout.scss';
-@import './components/auth/LoginScreen';
 
+//base imports
+@import './base/base';
+@import './base/settings';
+
+// object imports
+@import './objects/buttons';
+@import './objects/links';
+@import './objects/inputs';
+
+
+// react component imports
+@import './components/Ui/AuthLayout';
+@import './components/auth/LoginScreen';
+@import './components/auth/RegisterScreen';
+@import './components/journal/JournalScreen';
+@import './components/journal/Sidebar';
+@import './components/journal/JournalEntries';
+@import './components/journal/JournalEntry';
+@import './components/notes/NoteScreen';
+@import './components/notes/NotesAppBar';
