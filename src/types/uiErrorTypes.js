@@ -1,0 +1,8 @@
+const uiErrorTypes = {
+  SET_ERROR: '[UI ERROR] SET ERROR',
+  REMOVE_ERROR: '[UI ERROR] REMOVE ERROR',
+  START_LOADING: '[UI ERROR] START LOADING',
+  FINISH_LOADING: '[UI ERROR] FINISH LOADING',
+};
+
+export default uiErrorTypes;
