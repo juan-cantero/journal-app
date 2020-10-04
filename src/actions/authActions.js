@@ -2,6 +2,7 @@
 import AuthTypes from '../types/AuthTypes';
 import { firebase, googleAuthProvider } from '../firebase/firebase-config';
 import { finishLoading, startLoading } from './uiErrorActions';
+import Swal from 'sweetalert2';
 
 export const login = (uid, displayName) => ({
   type: AuthTypes.LOGIN,
@@ -20,6 +21,10 @@ export const startLoginWithEmailAndPassword = (email, password) => {
       .then(({ user }) => {
         dispatch(login(user.uid, user.displayName));
         dispatch(finishLoading());
+      })
+      .catch((error) => {
+        dispatch(finishLoading());
+        Swal.fire('Error', error.message, 'error');
       });
   };
 };
@@ -32,6 +37,9 @@ export const startRegister = (email, password, name) => {
       .then(async ({ user }) => {
         await user.updateProfile({ displayName: name });
         dispatch(login(user.uid, user.displayName));
+      })
+      .catch((error) => {
+        Swal.fire('Error', error.message, 'error');
       });
   };
 };
